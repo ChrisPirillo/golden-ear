@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1CQ4D3VQ3L"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1CQ4D3VQ3L');
+  </script>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+
+<title>Golden Ear: 3D Pitch Master</title>
+
+<meta name="description" content="Master your musical ear in this immersive 3D piano training app. Identify target frequencies on a virtual keyboard to build your perfect pitch streak.">
+<meta name="keywords" content="ear training, perfect pitch, 3D piano, music education, pitch mastery, musical game, audio training, Three.js">
+<meta name="author" content="Chris Pirillo">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0f172a">
+<meta name="application-name" content="Golden Ear: 3D Pitch Master">
+<meta name="apple-mobile-web-app-title" content="Golden Ear: 3D Pitch Master">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+
+<meta property="og:site_name" content="Chris Pirillo's Arcade">
+<meta property="og:type" content="video.game">
+<meta property="og:title" content="Golden Ear: 3D Pitch Master">
+<meta property="og:description" content="Master your musical ear in this immersive 3D piano training app. Identify target frequencies on a virtual keyboard to build your perfect pitch streak.">
+<meta property="og:url" content="https://arcade.pirillo.com/golden-ear.html">
+<meta property="og:image" content="https://arcade.pirillo.com/images/golden-ear.png">
+<meta property="og:image:alt" content="Golden Ear: 3D Pitch Master">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-02-26T21:46:57.638Z">
+<meta property="article:author" content="Chris Pirillo">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ChrisPirillo">
+<meta name="twitter:creator" content="@ChrisPirillo">
+<meta name="twitter:title" content="Golden Ear: 3D Pitch Master">
+<meta name="twitter:description" content="Master your musical ear in this immersive 3D piano training app. Identify target frequencies on a virtual keyboard to build your perfect pitch streak.">
+<meta name="twitter:image" content="https://arcade.pirillo.com/images/golden-ear.png">
+<meta name="twitter:domain" content="arcade.pirillo.com">
+<meta name="twitter:url" content="https://arcade.pirillo.com/golden-ear.html">
+
+<link rel="canonical" href="https://arcade.pirillo.com/golden-ear.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Golden Ear: 3D Pitch Master",
+  "description": "Master your musical ear in this immersive 3D piano training app. Identify target frequencies on a virtual keyboard to build your perfect pitch streak.",
+  "url": "https://arcade.pirillo.com/golden-ear.html",
+  "image": "https://arcade.pirillo.com/images/golden-ear.png",
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://arcade.pirillo.com/images/golden-ear.png"
+  },
+  "datePublished": "2026-02-26T21:46:57.638Z",
+  "dateModified": "2026-02-26T21:46:57.638Z",
+  "author": {
+    "@type": "Person",
+    "name": "Chris Pirillo",
+    "url": "https://pirillo.com",
+    "sameAs": [
+      "https://x.com/ChrisPirillo",
+      "https://linkedin.com/in/chrispirillo"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Chris Pirillo",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pirillo.com/logo.png"
+    }
+  },
+  "mainEntity": {
+    "@type": "VideoGame",
+    "name": "Golden Ear: 3D Pitch Master",
+    "description": "Master your musical ear in this immersive 3D piano training app. Identify target frequencies on a virtual keyboard to build your perfect pitch streak.",
+    "image": "https://arcade.pirillo.com/images/golden-ear.png",
+    "operatingSystem": "Any",
+    "applicationCategory": "Game",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Chris Pirillo",
+      "url": "https://pirillo.com"
+    },
+    "datePublished": "2026-02-26T21:46:57.638Z",
+    "inLanguage": "en-US",
+    "genre": "Music Education",
+    "playMode": "SinglePlayer"
+  }
+}</script>
+
+<meta charset="UTF-8">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap'); body { margin: 0; overflow: hidden; background: radial-gradient(circle at center, #312e81 0%, #1e1b4b 60%, #020617 100%); font-family: 'Inter', sans-serif; color: #faf8f5; }
+canvas { display: block; outline: none; }
+.ui-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10; }
+.interactive { pointer-events: auto; }
+.modal-blur { backdrop-filter: blur(40px) saturate(200%); background: rgba(30, 27, 75, 0.4); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 25px 50px -12px rgba(0, 0, 0, 0.9); }
+.tooltip { position: absolute; bottom: 110%; left: 50%; transform: translateX(-50%); padding: 4px 10px; background: rgba(0,0,0,0.95); color: white; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.15em; border-radius: 6px; white-space: nowrap; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+.tooltip-trigger:hover .tooltip { opacity: 1; }
+.glow-text { text-shadow: 0 0 20px rgba(212, 165, 116, 0.6); }</style>
+</head>
+<body><h1 style="display: none;">Golden Ear: 3D Pitch Master</h1>
+
+    <div class="ui-layer flex flex-col p-8">
+        <!-- Header -->
+        <div class="flex justify-end items-start mb-2">
+            <div class="flex gap-12 text-right interactive">
+                <div>
+                    <p class="text-[10px] font-bold text-indigo-200 tracking-widest uppercase mb-1">Score</p>
+                    <p id="score" class="text-4xl font-black tracking-tighter">0</p>
+                </div>
+                <div>
+                    <p id="streak-label" class="text-[10px] font-bold text-indigo-200 tracking-widest uppercase mb-1">Streak</p>
+                    <p class="text-4xl font-black text-[#d4a574] tracking-tighter glow-text"><span id="streak">0</span><span class="text-sm ml-1">x</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Area -->
+        <div class="flex flex-col items-center justify-start mt-6 md:mt-10">
+            <div id="feedback" class="text-4xl md:text-6xl font-black tracking-tighter opacity-0 transition-all duration-200 transform translate-y-2 h-16 pointer-events-none">
+                PERFECT
+            </div>
+            <div id="status-indicator" class="mt-2 text-[10px] font-black tracking-[0.6em] text-[#d4a574] uppercase opacity-0 transition-opacity duration-200">
+                Listen...
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-auto flex justify-end items-end">
+            <div id="game-actions" class="flex gap-4 interactive opacity-0 translate-y-8 transition-all duration-500">
+                <div class="relative tooltip-trigger">
+                    <button onclick="repeatTone()" class="p-4 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 text-[#d4a574] transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                    </button>
+                    <span class="tooltip">Repeat Tone</span>
+                </div>
+
+                <div class="relative tooltip-trigger">
+                    <button id="reset-btn" onclick="confirmReset()" class="p-4 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 text-indigo-200 transition-all">
+                        <svg id="reset-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg>
+                        <span id="reset-confirm-text" class="hidden font-black text-[10px] px-2 text-red-400">SURE?</span>
+                    </button>
+                    <span class="tooltip">New Game</span>
+                </div>
+
+                <div class="relative tooltip-trigger">
+                    <button onclick="toggleInfo()" class="p-4 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 text-indigo-200 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
+                    </button>
+                    <span class="tooltip">Info</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="info-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-6 bg-black/40 interactive">
+        <div class="modal-blur p-10 rounded-[40px] max-w-lg w-full shadow-2xl overflow-y-auto max-h-[90vh]">
+            <h2 class="text-3xl font-black mb-4 uppercase tracking-tighter text-[#d4a574]">GOLDEN EAR</h2>
+            <div class="text-sm text-indigo-100 space-y-4 mb-8 text-left leading-relaxed">
+                <p>Listen to the target frequency, then find the corresponding key on the 3D piano.</p>
+                <div class="h-[1px] bg-white/10 w-full my-6"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="https://chris.pirillo.com/" target="_blank" class="p-3 rounded-xl bg-white/10 hover:bg-[#d4a574]/20 border border-white/10 transition-all text-xs font-bold uppercase tracking-wider text-[#d4a574] text-center">Follow Chris Pirillo</a>
+                    <a href="https://arcade.pirillo.com/" target="_blank" class="p-3 rounded-xl bg-white/10 hover:bg-[#d4a574]/20 border border-white/10 transition-all text-xs font-bold uppercase tracking-wider text-[#d4a574] text-center">More Apps</a>
+                    <a href="https://ctrlaltcreate.live/" target="_blank" class="p-3 rounded-xl bg-white/10 hover:bg-[#d4a574]/20 border border-white/10 transition-all text-xs font-bold uppercase tracking-wider text-[#d4a574] text-center">Learn How to Make Apps</a>
+                    <a href="https://patreon.com/ChrisPirillo" target="_blank" class="p-3 rounded-xl bg-white/10 hover:bg-[#d4a574]/20 border border-white/10 transition-all text-xs font-bold uppercase tracking-wider text-[#d4a574] text-center">Support Patreon</a>
+                </div>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=UMWCDWGVXVHZU" target="_blank" class="block w-full p-4 mt-2 rounded-xl bg-[#d4a574] text-black hover:bg-[#c39665] transition-all text-sm font-black uppercase tracking-widest text-center">Donate Here</a>
+            </div>
+            <button onclick="toggleInfo()" class="w-full py-4 rounded-2xl bg-white/10 text-white font-black uppercase tracking-widest text-[10px] hover:bg-white/20 transition-all">Close</button>
+        </div>
+    </div>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/40">
+        <div class="modal-blur p-12 rounded-[50px] max-w-sm w-full text-center shadow-2xl">
+            <div class="w-20 h-20 bg-[#d4a574]/30 rounded-full flex items-center justify-center mx-auto mb-8 text-[#d4a574] shadow-[0_0_50px_rgba(212,165,116,0.4)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+            </div>
+            <h2 class="text-4xl font-black mb-2 uppercase tracking-tighter text-[#d4a574]">GOLDEN EAR</h2>
+            <p class="text-[10px] text-indigo-100 font-bold mb-10 tracking-[0.4em] uppercase leading-relaxed px-2">
+                Pitch Mastery Training
+            </p>
+            <div class="space-y-4">
+                <button onclick="selectDifficulty('easy')" class="w-full py-5 rounded-2xl border border-white/10 bg-white/10 uppercase text-[10px] font-black tracking-[0.4em] transition-all hover:bg-[#d4a574] hover:text-black">Easy</button>
+                <button onclick="selectDifficulty('medium')" class="w-full py-5 rounded-2xl border border-white/10 bg-white/10 uppercase text-[10px] font-black tracking-[0.4em] transition-all hover:bg-[#d4a574] hover:text-black">Medium</button>
+                <button onclick="selectDifficulty('hard')" class="w-full py-5 rounded-2xl border border-white/10 bg-white/10 uppercase text-[10px] font-black tracking-[0.4em] transition-all hover:bg-[#d4a574] hover:text-black">Hard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script>
+        const NOTES = {
+            'C4': 261.63, 'C#4': 277.18, 'D4': 293.66, 'D#4': 311.13,
+            'E4': 329.63, 'F4': 349.23, 'F#4': 369.99, 'G4': 392.00,
+            'G#4': 415.30, 'A4': 440.00, 'A#4': 466.16, 'B4': 493.88, 'C5': 523.25
+        };
+        const WHITE_KEYS = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'];
+        const BLACK_KEYS = ['C#4', 'D#4', 'F#4', 'G#4', 'A#4'];
+        const BLACK_KEY_OFFSETS = [0, 1, 3, 4, 5];
+
+        let score = 0, streak = 0, difficulty = 'medium', gameState = 'idle', targetNote = null, lastTargetNote = null;
+        let audioCtx = null, currentGainNode = null, currentOscillator = null;
+        let scene, camera, renderer, controls, pianoGroup, keys = {}, circleGroup;
+        let isResetConfirming = false, resetTimer = null;
+
+        function init3D() {
+            scene = new THREE.Scene();
+            scene.fog = new THREE.FogExp2(0x1e1b4b, 0.008);
+
+            camera = new THREE.PerspectiveCamera(34, window.innerWidth / window.innerHeight, 0.1, 2000);
+            camera.position.set(0, 7, 13);
+
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.shadowMap.enabled = true;
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.toneMappingExposure = 1.2; 
+            document.body.appendChild(renderer.domElement);
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.enablePan = false;
+            controls.enableZoom = false; 
+            controls.minAzimuthAngle = -Math.PI / 10; 
+            controls.maxAzimuthAngle = Math.PI / 10;
+            controls.minPolarAngle = Math.PI / 3.4; 
+            controls.maxPolarAngle = Math.PI / 2.15;
+
+            const sun = new THREE.DirectionalLight(0xffffff, 2.5);
+            sun.position.set(20, 40, 30);
+            sun.castShadow = true;
+            scene.add(sun);
+
+            const amberLight = new THREE.PointLight(0xd4a574, 3, 100);
+            amberLight.position.set(-20, 15, 10);
+            scene.add(amberLight);
+
+            const violetLight = new THREE.PointLight(0x7c3aed, 2, 100);
+            violetLight.position.set(20, 15, 10);
+            scene.add(violetLight);
+
+            scene.add(new THREE.AmbientLight(0x4338ca, 1.5));
+
+            createGenerativeAtmosphere();
+            createPiano();
+            setupInput();
+            animate();
+        }
+
+        function createGenerativeAtmosphere() {
+            const palette = [0x22d3ee, 0xd4a574, 0x818cf8, 0xec4899, 0xffffff, 0x6366f1];
+            const circleCount = 450; 
+            circleGroup = new THREE.Group();
+            
+            const circleGeo = new THREE.CircleGeometry(1, 32);
+
+            for (let i = 0; i < circleCount; i++) {
+                const color = palette[Math.floor(Math.random() * palette.length)];
+                const mat = new THREE.MeshBasicMaterial({
+                    color: color,
+                    transparent: true,
+                    opacity: 0.15 + Math.random() * 0.45,
+                    side: THREE.FrontSide, 
+                    blending: THREE.AdditiveBlending
+                });
+
+                const circle = new THREE.Mesh(circleGeo, mat);
+                
+                // Positioned strictly behind the keyboard (Z < -15)
+                const r = 50 + Math.random() * 150;
+                const theta = Math.random() * Math.PI * 2;
+                // Bias phi to stay deeper in the background hemisphere
+                const phi = Math.acos(0.8 * Math.random() - 1); 
+                
+                circle.position.set(
+                    r * Math.sin(phi) * Math.cos(theta),
+                    r * Math.sin(phi) * Math.sin(theta),
+                    r * Math.cos(phi) - 20 // Added offset to guarantee background positioning
+                );
+                
+                circle.scale.setScalar(0.5 + Math.pow(Math.random(), 2) * 8.0);
+                circle.rotation.set(0, 0, 0); 
+                
+                // Drastically slowed generative drift
+                circle.userData = {
+                    velocity: new THREE.Vector3(
+                        (Math.random() - 0.5) * 0.02,
+                        (Math.random() - 0.5) * 0.02,
+                        (Math.random() - 0.5) * 0.02
+                    ),
+                    parallaxFactor: 0.08 + Math.random() * 0.3
+                };
+
+                circleGroup.add(circle);
+            }
+            scene.add(circleGroup);
+        }
+
+        function createPiano() {
+            pianoGroup = new THREE.Group();
+            pianoGroup.position.y = -0.8;
+            scene.add(pianoGroup);
+
+            const ground = new THREE.Mesh(
+                new THREE.PlaneGeometry(1500, 1500),
+                new THREE.MeshPhysicalMaterial({ 
+                    transparent: true, opacity: 0.1, color: 0x000000, roughness: 0.2, metalness: 0.8 
+                })
+            );
+            ground.rotation.x = -Math.PI / 2;
+            ground.position.y = -0.55;
+            ground.receiveShadow = true;
+            scene.add(ground);
+
+            const baseGeo = new THREE.BoxGeometry(9.4, 0.4, 6.8);
+            const baseMat = new THREE.MeshPhysicalMaterial({ 
+                color: 0x050505, roughness: 0.1, metalness: 1.0, clearcoat: 1.0
+            });
+            const base = new THREE.Mesh(baseGeo, baseMat);
+            base.position.y = -0.2; 
+            base.receiveShadow = true;
+            base.castShadow = true;
+            pianoGroup.add(base);
+
+            const spacing = 1.1; 
+
+            WHITE_KEYS.forEach((note, i) => {
+                const x = (i - WHITE_KEYS.length / 2 + 0.5) * spacing;
+                keys[note] = createKey(note, false, [x, 0.2, 0]);
+            });
+
+            BLACK_KEYS.forEach((note, i) => {
+                const x = (BLACK_KEY_OFFSETS[i] - WHITE_KEYS.length / 2 + 1.1) * spacing;
+                keys[note] = createKey(note, true, [x, 0.5, -1.3]);
+            });
+        }
+
+        function createKey(note, isBlack, pos) {
+            let shape = new THREE.Shape();
+            const w = isBlack ? 0.56 : 0.98; 
+            const d = isBlack ? 3.6 : 5.4;
+            const h = isBlack ? 0.85 : 0.52;
+
+            shape.moveTo(-w/2 + 0.08, -d/2);
+            shape.lineTo(w/2 - 0.08, -d/2);
+            shape.quadraticCurveTo(w/2, -d/2, w/2, -d/2 + 0.08);
+            shape.lineTo(w/2, d/2 - 0.08);
+            shape.quadraticCurveTo(w/2, d/2, w/2 - 0.08, d/2);
+            shape.lineTo(-w/2 + 0.08, d/2);
+            shape.quadraticCurveTo(-w/2, d/2, -w/2, d/2 - 0.08);
+            shape.lineTo(-w/2, -d/2 + 0.08);
+            shape.quadraticCurveTo(-w/2, -d/2, -w/2 + 0.08, -d/2);
+
+            const extrudeSettings = { depth: h, bevelEnabled: true, bevelThickness: 0.08, bevelSize: 0.06, bevelSegments: 12 };
+            const geo = new THREE.ExtrudeGeometry(shape, extrudeSettings);
+            geo.rotateX(-Math.PI / 2);
+
+            if (isBlack) {
+                const attr = geo.attributes.position;
+                for (let i = 0; i < attr.count; i++) {
+                    const py = attr.getY(i);
+                    if (py > 0) { 
+                        attr.setX(i, attr.getX(i) * 0.82);
+                        attr.setZ(i, attr.getZ(i) * 0.82);
+                    }
+                }
+            }
+
+            const mat = new THREE.MeshPhysicalMaterial({
+                color: isBlack ? 0x0a0a0a : 0xbbbbbb, 
+                metalness: isBlack ? 1.0 : 0.1,
+                roughness: 0.2,
+                clearcoat: 0.5,
+                reflectivity: 0.5
+            });
+
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.set(...pos);
+            mesh.castShadow = true;
+            mesh.receiveShadow = true;
+            mesh.userData = { note, isBlack, originalY: pos[1], targetY: pos[1] };
+            pianoGroup.add(mesh);
+            return mesh;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            const time = performance.now() * 0.001;
+
+            // Update Circle Atmosphere
+            circleGroup.children.forEach(circle => {
+                // Generative drift
+                circle.position.add(circle.userData.velocity);
+                
+                // Parallax shift based on camera position
+                circle.position.x += (camera.position.x * circle.userData.parallaxFactor * 0.015);
+                circle.position.y += ((camera.position.y - 7) * circle.userData.parallaxFactor * 0.015);
+
+                // Boundary wrapping with strict Z limit to prevent clipping into keyboard
+                if (Math.abs(circle.position.x) > 200) circle.position.x *= -0.99;
+                if (Math.abs(circle.position.y) > 200) circle.position.y *= -0.99;
+                
+                // If Z drifts too close to piano (Z > -12), bounce back or reset deep
+                if (circle.position.z > -12) circle.position.z = -15;
+                if (circle.position.z < -250) circle.position.z = -240;
+            });
+
+            pianoGroup.position.y = -0.8 + Math.sin(time * 0.5) * 0.08;
+            
+            Object.values(keys).forEach(key => {
+                key.position.y = THREE.MathUtils.lerp(key.position.y, key.userData.targetY, 0.28);
+            });
+
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        function selectDifficulty(lvl) { difficulty = lvl; startGame(); }
+        
+        function startGame() {
+            document.getElementById('start-screen').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('start-screen').style.display = 'none';
+                document.getElementById('game-actions').style.opacity = '1';
+                document.getElementById('game-actions').style.transform = 'translateY(0)';
+                startNewRound();
+            }, 500);
+        }
+
+        function startNewRound() {
+            setUIFeedback('', false);
+            document.getElementById('status-indicator').style.opacity = '1';
+            Object.values(keys).forEach(k => {
+                k.material.color.set(k.userData.isBlack ? 0x0a0a0a : 0xbbbbbb);
+            });
+            const pool = (difficulty === 'easy') ? WHITE_KEYS.slice(0, 4) : (difficulty === 'medium' ? WHITE_KEYS : [...WHITE_KEYS, ...BLACK_KEYS]);
+            let nextNote;
+            do { nextNote = pool[Math.floor(Math.random() * pool.length)]; } while (nextNote === lastTargetNote && pool.length > 1);
+            targetNote = nextNote;
+            lastTargetNote = nextNote;
+            gameState = 'waiting'; 
+            playAudio(targetNote);
+            setTimeout(() => { if (gameState === 'waiting') document.getElementById('status-indicator').style.opacity = '0'; }, 1200);
+        }
+
+        function handlePress(note) {
+            depressKey(note);
+            playAudio(note);
+            document.getElementById('status-indicator').style.opacity = '0';
+            if (gameState === 'waiting') {
+                if (note === targetNote) {
+                    score += 10 * (streak + 1); streak++; setUIFeedback('PERFECT ✓', true);
+                    keys[note].material.color.set(0x22c55e);
+                    gameState = 'idle'; setTimeout(startNewRound, 1000);
+                } else {
+                    streak = 0; setUIFeedback(`MISS ✗`, false);
+                    keys[note].material.color.set(0xef4444);
+                    keys[targetNote].material.color.set(0xfbbf24);
+                    depressKey(targetNote);
+                    gameState = 'idle'; setTimeout(startNewRound, 2000);
+                }
+                document.getElementById('score').innerText = score;
+                document.getElementById('streak').innerText = streak;
+            }
+        }
+
+        function setUIFeedback(text, success) {
+            const el = document.getElementById('feedback');
+            el.innerText = text;
+            el.style.opacity = text ? '1' : '0';
+            el.style.transform = text ? 'translateY(0)' : 'translateY(1rem)';
+            el.className = `text-4xl md:text-6xl font-black tracking-tighter transition-all duration-200 transform ${success ? 'text-green-400' : 'text-red-500'}`;
+        }
+
+        function repeatTone() { if (targetNote) playAudio(targetNote); }
+        
+        function confirmReset() {
+            if (!isResetConfirming) {
+                isResetConfirming = true;
+                document.getElementById('reset-icon').classList.add('hidden');
+                document.getElementById('reset-confirm-text').classList.remove('hidden');
+                resetTimer = setTimeout(() => { cancelReset(); }, 3000);
+            } else {
+                resetGame();
+                cancelReset();
+            }
+        }
+
+        function cancelReset() {
+            isResetConfirming = false;
+            clearTimeout(resetTimer);
+            document.getElementById('reset-icon').classList.remove('hidden');
+            document.getElementById('reset-confirm-text').classList.add('hidden');
+        }
+
+        function resetGame() { 
+            score = 0; streak = 0; lastTargetNote = null; 
+            document.getElementById('score').innerText = 0; 
+            document.getElementById('streak').innerText = 0; 
+            document.getElementById('start-screen').style.display = 'flex'; 
+            document.getElementById('start-screen').style.opacity = '1';
+            gameState = 'idle'; 
+            document.getElementById('status-indicator').style.opacity = '0'; 
+        }
+
+        function toggleInfo() {
+            const modal = document.getElementById('info-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function playAudio(noteId) {
+            const freq = NOTES[noteId];
+            if (!freq) return;
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            
+            if (currentOscillator) {
+                try {
+                    currentGainNode.gain.cancelScheduledValues(audioCtx.currentTime);
+                    currentGainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.05);
+                    currentOscillator.stop(audioCtx.currentTime + 0.06);
+                } catch(e) {}
+            }
+            
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            currentOscillator = osc; currentGainNode = gain;
+            osc.connect(gain); gain.connect(audioCtx.destination);
+            osc.type = 'triangle'; osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0, audioCtx.currentTime);
+            gain.gain.linearRampToValueAtTime(0.4, audioCtx.currentTime + 0.05);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.2);
+            osc.start(); osc.stop(audioCtx.currentTime + 1.25);
+        }
+
+        function depressKey(noteId) {
+            const key = keys[noteId];
+            if (key) {
+                key.userData.targetY = key.userData.originalY - 0.25;
+                setTimeout(() => { if (key) key.userData.targetY = key.userData.originalY; }, 120);
+            }
+        }
+
+        function setupInput() {
+            const canvas = renderer.domElement;
+            const raycaster = new THREE.Raycaster();
+            const mouse = new THREE.Vector2();
+            canvas.addEventListener('pointerdown', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+                mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+                raycaster.setFromCamera(mouse, camera);
+                const intersects = raycaster.intersectObjects(pianoGroup.children, true);
+                const hit = intersects.find(intersect => intersect.object.userData && intersect.object.userData.note);
+                if (hit) handlePress(hit.object.userData.note);
+            });
+            canvas.addEventListener('pointermove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+                mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+                raycaster.setFromCamera(mouse, camera);
+                const intersects = raycaster.intersectObjects(pianoGroup.children, true);
+                const isOverKey = intersects.some(intersect => intersect.object.userData && intersect.object.userData.note);
+                canvas.style.cursor = isOverKey ? 'pointer' : 'default';
+            });
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+        window.onload = init3D;
+    </script>
+
+</body></html>
